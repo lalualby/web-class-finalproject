@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Siswa - Web Class</title>
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Dashboard Siswa -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+      <div class="container-fluid px-md-4">
+        <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="#">
+          <i class="bi bi-backpack4-fill text-primary fs-4 me-2"></i>
+          <span>Web-Class <span class="badge bg-primary-subtle text-primary border border-primary-subtle ms-1">Portal Siswa</span></span>
+        </a>
+
+        <div class="d-flex align-items-center gap-3">
+          <!-- Info Profil Siswa yang Sedang Login -->
+          <div class="text-end d-none d-sm-block">
+            <div id="siswaDisplayName" class="fw-semibold small">Nama Siswa</div>
+            <div id="siswaIdentitas" class="text-muted" style="font-size: 0.75rem;">NIS: -</div>
+          </div>
+          
+          <!-- Tombol Logout -->
+          <button class="btn btn-outline-danger btn-sm" onclick="Auth.logout()" title="Keluar">
+            <i class="bi bi-box-arrow-right me-1"></i> Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Konten Utama Dashboard Siswa -->
+    <main class="container-fluid px-md-4 py-4">
+      
+      <!-- Banner Sambutan Siswa -->
+      <div class="dashboard-header-banner banner-siswa shadow-sm">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <span class="badge bg-light text-primary mb-2">Area Siswa</span>
+            <h2 class="fw-bold mb-1" id="bannerGreetingSiswa">Halo, Siswa!</h2>
+            <p class="mb-0 opacity-75">
+              Pantau jadwal pelajaran harian, pembagian regu piket kebersihan, serta pengumuman penting kelasmu di sini.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end mt-3 mt-md-0">
+            <div class="bg-white bg-opacity-20 p-2 rounded-3 text-white small d-inline-block text-start">
+              <i class="bi bi-clock-history me-1"></i> <span id="currentDateBadge">Hari ini: Memuat tanggal...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- ==============================================
+             KOLOM KIRI: JADWAL PELAJARAN HARI INI & MINGGUAN
+        ============================================== -->
+        <div class="col-lg-7">
+          <div class="feature-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <h5 class="fw-bold mb-0"><i class="bi bi-journal-bookmark-fill text-primary me-2"></i>Jadwal Pelajaran</h5>
+                <small class="text-muted">Mata pelajaran yang harus kamu persiapkan</small>
+              </div>
+              <span class="badge bg-primary px-3 py-2">Semester Ganjil</span>
+            </div>
+
+            <!-- Kartu Sorotan Jadwal Hari Ini -->
+            <div class="alert alert-primary border-primary-subtle d-flex align-items-center mb-4">
+              <i class="bi bi-bell-fill fs-3 text-primary me-3"></i>
+              <div>
+                <div class="fw-bold">Pelajaran Hari Ini (Senin):</div>
+                <div class="small text-muted">07.00 - Upacara & Pemrograman Web | 08.30 - Basis Data | 10.15 - Matematika</div>
+              </div>
+            </div>
+
+            <!-- List Jadwal Lengkap -->
+            <div class="table-responsive">
+              <table class="table table-hover align-middle">
+                <thead class="table-light">
+                  <tr>
+                    <th>Hari</th>
+                    <th>Jam</th>
+                    <th>Mata Pelajaran</th>
+                    <th>Guru Pengampu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-active">
+                    <td><span class="badge bg-primary">Senin</span></td>
+                    <td>07.00 - 12.00</td>
+                    <td class="fw-semibold">Pemrograman Web & Basis Data</td>
+                    <td>Pak Budi & Ibu Siti</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge bg-secondary">Selasa</span></td>
+                    <td>07.00 - 12.00</td>
+                    <td class="fw-semibold">Bahasa Indonesia & Bahasa Inggris</td>
+                    <td>Ibu Rahma & Pak John</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge bg-secondary">Rabu</span></td>
+                    <td>07.00 - 12.00</td>
+                    <td class="fw-semibold">Desain UI/UX & Mobile Dev</td>
+                    <td>Pak Andi & Pak Mikhail</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge bg-secondary">Kamis</span></td>
+                    <td>07.00 - 12.00</td>
+                    <td class="fw-semibold">PKK & Fisika Terapan</td>
+                    <td>Ibu Dewi & Pak Joko</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge bg-secondary">Jumat</span></td>
+                    <td>07.00 - 11.00</td>
+                    <td class="fw-semibold">Olahraga, Rohis & BK</td>
+                    <td>Pak Fajar & Ibu Nina</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==============================================
+             KOLOM KANAN: JADWAL PIKET & PENGUMUMAN
+        ============================================== -->
+        <div class="col-lg-5">
+          
+          <!-- Fitur 2: Jadwal Piket Kebersihan -->
+          <div class="feature-card p-4 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <h5 class="fw-bold mb-0"><i class="bi bi-stars text-warning me-2"></i>Jadwal Piket Kebersihan</h5>
+                <small class="text-muted">Regu piket kelas harian</small>
+              </div>
+              <span class="badge bg-warning text-dark">5 Regu</span>
+            </div>
+
+            <!-- Status Piket Pengguna Saat Ini -->
+            <div id="piketAlertSiswa" class="p-3 bg-light rounded-3 mb-3 border">
+              <div class="small fw-bold text-secondary mb-1">Status Piket Kamu:</div>
+              <div id="piketStatusDetail" class="small text-dark">Memeriksa jadwal piket nama Anda...</div>
+            </div>
+
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item d-flex justify-content-between px-0 py-2">
+                <span><strong>Senin:</strong> Mikhail, Alby, Rizky, Nadia</span>
+                <span class="badge bg-light text-muted border">Senin</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between px-0 py-2">
+                <span><strong>Selasa:</strong> Mufid, Dimas, Tiara, Zahra</span>
+                <span class="badge bg-light text-muted border">Selasa</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between px-0 py-2">
+                <span><strong>Rabu:</strong> Nafiz, Fajar, Salsa, Angga</span>
+                <span class="badge bg-light text-muted border">Rabu</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between px-0 py-2">
+                <span><strong>Kamis:</strong> Bayu, Citra, Dinda, Farhan</span>
+                <span class="badge bg-light text-muted border">Kamis</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between px-0 py-2">
+                <span><strong>Jumat:</strong> Haikal, Intan, Kevin, Laras</span>
+                <span class="badge bg-light text-muted border">Jumat</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Fitur 3: Pengumuman Kelas -->
+          <div class="feature-card p-4">
+            <h5 class="fw-bold mb-3"><i class="bi bi-megaphone-fill text-danger me-2"></i>Pengumuman Kelas</h5>
+            <div class="border-start border-3 border-danger ps-3 mb-3">
+              <div class="fw-semibold small">Pengumpulan Final Project Web-Class</div>
+              <div class="text-muted" style="font-size: 0.78rem;">Batas akhir pengumpulan revisi UI/UX dan presentasi kelompok minggu ini. Harap semua anggota tim siap.</div>
+            </div>
+            <div class="border-start border-3 border-primary ps-3">
+              <div class="fw-semibold small">Kerapian Kelas dan Loker</div>
+              <div class="text-muted" style="font-size: 0.78rem;">Regu piket diharapkan membersihkan papan tulis dan membuang sampah sebelum bel pulang berbunyi.</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Auth Controller Logic -->
+    <script src="js/auth.js"></script>
+
+    <!-- Script Siswa Page Logic -->
+    <script>
+      // 1. Cek Sesi Login: Siswa harus sudah login (Guru juga diizinkan melihat tampilan siswa)
+      const session = Auth.getSession();
+      if (!session) {
+        alert('Silakan login terlebih dahulu!');
+        window.location.href = 'index.html';
+      }
+
+      // 2. Render Identitas Siswa
+      if (session) {
+        document.getElementById('siswaDisplayName').innerText = session.nama;
+        document.getElementById('siswaIdentitas').innerText = session.identitas || 'Siswa Kelas';
+        document.getElementById('bannerGreetingSiswa').innerText = `Halo, ${session.nama}! 👋`;
+
+        // Update status tanggal
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('currentDateBadge').innerText = now.toLocaleDateString('id-ID', options);
+
+        // Highlight jadwal piket untuk siswa yang sedang login
+        const piketStatusEl = document.getElementById('piketStatusDetail');
+        const userLower = session.nama.toLowerCase();
+
+        if (userLower.includes('mikhail') || userLower.includes('alby')) {
+          piketStatusEl.innerHTML = `<span class="badge bg-primary">Regu Hari Senin</span> - Kamu bertugas piket setiap hari <strong>Senin</strong> bersama Alby, Rizky, dan Nadia.`;
+        } else if (userLower.includes('mufid')) {
+          piketStatusEl.innerHTML = `<span class="badge bg-secondary">Regu Hari Selasa</span> - Kamu bertugas piket setiap hari <strong>Selasa</strong> bersama Dimas, Tiara, dan Zahra.`;
+        } else if (userLower.includes('nafiz')) {
+          piketStatusEl.innerHTML = `<span class="badge bg-secondary">Regu Hari Rabu</span> - Kamu bertugas piket setiap hari <strong>Rabu</strong> bersama Fajar, Salsa, dan Angga.`;
+        } else {
+          piketStatusEl.innerHTML = `Kamu terdaftar di regu piket kelas. Jangan lupa cek hari giliranmu!`;
+        }
+      }
+    </script>
+  </body>
+</html>
