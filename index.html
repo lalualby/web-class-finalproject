@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Web Kelas X-1 | Final Project HTML</title>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGASI
+       ========================================================================== -->
+  <header>
+    <h1>ClassHub X-1</h1>
+    <p>Portal Resmi & Pusat Informasi Kelas X-1</p>
+
+    <!-- Navigasi Utama -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About & Tim</a></li>
+        <li><a href="#jadwal">Jadwal & Piket</a></li>
+        <li><a href="#tugas">Info Tugas & PR</a></li>
+        <li><a href="#kas">Laporan Uang Kas</a></li>
+        <li><a href="#pengumuman">Papan Pengumuman</a></li>
+        <li><a href="#struktur">Struktur Kelas</a></li>
+        <li><a href="#profil">Profil Siswa & Ultah</a></li>
+        <li><a href="#materi">Bank Materi Drive</a></li>
+        <li><a href="#galeri">Galeri Kegiatan</a></li>
+        <li><a href="#menfess">Menfess & Aspirasi</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1: HOME (HALAMAN UTAMA)
+       ========================================================================== -->
+  <main>
+    <section id="home">
+      <h2>Selamat Datang di Website Resmi Kelas X-1</h2>
+      <p>
+        Website ini merupakan ruang digital kolaborasi dan pusat informasi harian siswa Kelas X-1.
+        Semua informasi mulai dari jadwal sekolah, pembagian tugas piket, tenggat waktu PR,
+        transparansi uang kas, modul materi guru, hingga kotak aspirasi anonim terintegrasi di sini.
+      </p>
+
+      <!-- Informasi Hari & Jam -->
+      <article>
+        <h3>Informasi Hari Ini</h3>
+        <p><b>Hari Aktif:</b> <span id="displayDay">Senin s/d Jumat</span></p>
+        <p><b>Waktu Sekolah:</b> 07:00 - 14:15 WIB</p>
+        <p><b>Peringatan Terkini:</b> Gladi bersih upacara hari Kamis wajib memakai seragam Batik Daerah dan sepatu hitam polos.</p>
+      </article>
+
+      <!-- Pintasan Aksi Cepat -->
+      <article>
+        <h3>Pintasan Menu Utama</h3>
+        <ul>
+          <li><a href="#jadwal">Lihat Jadwal Pelajaran Hari Ini</a></li>
+          <li><a href="#tugas">Periksa Tugas yang Mendekati Deadline</a></li>
+          <li><a href="#kas">Cek Laporan & Saldo Uang Kas</a></li>
+          <li><a href="#menfess">Kirim Aspirasi / Menfess Rahasia</a></li>
+        </ul>
+      </article>
+      <hr>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: ABOUT & TIM PENGEMBANG (Alby, Mufid, Mikael, Nafidz)
+         ========================================================================== -->
+    <section id="about">
+      <h2>Tentang Web-Class & Tim Pengembang</h2>
+      <p>
+        Website ini dibuat sebagai <b>Final Project Belajar HTML Kelas X</b> oleh tim kolaborasi
+        yang terdiri dari 4 siswa: <b>Alby, Mufid, Mikael, dan Nafidz</b>.
+      </p>
+
+      <article>
+        <h3>Visi & Misi Kelas X-1</h3>
+        <h4>Visi:</h4>
+        <p>Mewujudkan kelas yang solid, berprestasi, transparan, dan melek teknologi.</p>
+        <h4>Misi:</h4>
+        <ol>
+          <li>Menciptakan lingkungan belajar yang disiplin, bersih, dan saling mendukung.</li>
+          <li>Menyediakan pusat informasi terpadu yang dapat diakses seluruh siswa setiap saat.</li>
+          <li>Menjaga transparansi pengelolaan keuangan kelas secara terbuka dan jujur.</li>
+          <li>Menyalurkan aspirasi dan kreativitas siswa melalui wadah yang positif.</li>
+        </ol>
+      </article>
+
+      <article>
+        <h3>Profil Tim Pengembang Proyek</h3>
+        <ul>
+          <li>
+            <b>Alby Fabian</b> - Penanggung Jawab Bagian <i>About & Struktur Konten</i>
+            <br>Tugas: Menyusun konten informasi perkenalan kelas, visi misi, dan penataan semantik halaman.
+          </li>
+          <li>
+            <b>Mufid Al-Haq</b> - Penanggung Jawab Bagian <i>Laporan Uang Kas & Keuangan</i>
+            <br>Tugas: Menyusun tabel pemasukan, pengeluaran, serta pencatatan status iuran siswa.
+          </li>
+          <li>
+            <b>Mikael Kevin</b> - Penanggung Jawab Bagian <i>Jadwal, Tugas & Hak Akses</i>
+            <br>Tugas: Menyusun tabel jadwal harian, jadwal piket kebersihan, serta info daftar tugas dan PR.
+          </li>
+          <li>
+            <b>Nafidz Maulana</b> - Penanggung Jawab Bagian <i>Media, Galeri & Aspirasi</i>
+            <br>Tugas: Mengelola dokumentasi galeri foto, tautan bank materi, serta kotak pesan menfess.
+          </li>
+        </ul>
+      </article>
+      <hr>
+    </section>
+
+    <!-- ==========================================================================
+         FITUR WAJIB 1: JADWAL PELAJARAN & PIKET KEBERSIHAN
+         ========================================================================== -->
+    <section id="jadwal">
+      <h2>Jadwal Pelajaran & Piket Kebersihan Kelas</h2>
+      <p>Jadwal mata pelajaran dan giliran piket siswa Kelas X-1 untuk hari Senin sampai dengan Jumat.</p>
+
+      <!-- Tabel Jadwal Pelajaran -->
+      <article>
+        <h3>1. Jadwal Mata Pelajaran</h3>
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th>Hari</th>
+              <th>Jam Ke-</th>
+              <th>Waktu</th>
+              <th>Mata Pelajaran</th>
+              <th>Guru Pengampu</th>
+              <th>Ruangan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Senin -->
+            <tr>
+              <td rowspan="4"><b>Senin</b></td>
+              <td>1</td>
+              <td>07:00 - 07:45</td>
+              <td>Upacara Bendera</td>
+              <td>Kepala Sekolah & Seluruh Guru</td>
+              <td>Lapangan Utama</td>
+            </tr>
+            <tr>
+              <td>2 - 3</td>
+              <td>07:45 - 09:15</td>
+              <td>Matematika Wajib</td>
+              <td>Pak Joko, M.Pd</td>
+              <td>Ruang X-1</td>
+            </tr>
+            <tr>
+              <td>4 - 5</td>
+              <td>09:45 - 11:15</td>
+              <td>Bahasa Indonesia</td>
+              <td>Bu Ratna, S.Pd</td>
+              <td>Ruang X-1</td>
+            </tr>
+            <tr>
+              <td>6 - 7</td>
+              <td>11:15 - 12:45</td>
+              <td>Informatika (Pemrograman Web)</td>
+              <td>Pak Hendra, S.Kom</td>
+              <td>Lab Komputer 2</td>
+            </tr>
+
+            <!-- Selasa -->
+            <tr>
+              <td rowspan="4"><b>Selasa</b></td>
+              <td>1 - 2</td>
+              <td>07:15 - 08:45</td>
+              <td>Fisika Dasar</td>
+              <td>Pak Budi Santoso, M.Si</td>
+              <td>Lab Fisika</td>
+            </tr>
+            <tr>
+              <td>3 - 4</td>
+              <td>08:45 - 10:15</td>
+              <td>Bahasa Inggris</td>
+              <td>Miss Clara, M.Hum</td>
+              <td>Ruang X-1</td>
+            </tr>
+            <tr>
+              <td>5 - 6</td>
+              <td>10:45 - 12:15</td>
+              <td>Biologi</td>
+              <td>Bu Sri Wahyuni, S.Pd</td>
+              <td>Lab Biologi</td>
+            </tr>
+            <tr>
+              <td>7 - 8</td>
+              <td>12:45 - 14:15</td>
+              <td>Pendidikan Agama & Budi Pekerti</td>
+              <td>Ust. Mansur, M.Ag</td>
+              <td>Musholla Sekolah</td>
+            </tr>
+
+            <!-- Rabu -->
+            <tr>
+              <td rowspan="4"><b>Rabu</b></td>
+              <td>1 - 2</td>
+              <td>07:15 - 08:45</td>
+              <td>Kimia</td>
+              <td>Bu Diana, M.Pd</td>
+              <td>Lab Kimia</td>
+            </tr>
+            <tr>
+              <td>3 - 4</td>
+              <td>08:45 - 10:15</td>
+              <td>Sejarah Indonesia</td>
+              <td>Pak Slamet, S.Pd</td>
+              <td>Ruang X-1</td>
+            </tr>
+            <tr>
+              <td>5 - 6</td>
+              <td>10:45 - 12:15</td>
+              <td>Pendidikan Pancasila (PPKn)</td>
+              <td>Pak Wahyu, S.Pd</td>
+              <td>Ruang X-1</td>
+            </tr>
+            <tr>
+              <td>7 - 8</td>
+              <td>12:45 - 14:15</td>
+              <td>Seni Budaya</td>
+              <td>Bu Maya, S.Sn</td>
+              <td>Ruang Kesenian</td>
+            </tr>
+
+            <!-- Kamis -->
+            <tr>
+              <td rowspan="4"><b>Kamis</b></td>
+              <td>1 - 2</td>
+              <td>07:15 - 08:45</td>
+              <td>PJOK (Olahraga)</td>
+              <td>Pak Agus, S.Pd.Kor</td>
+              <td>Lapangan / GOR</td>
+            </tr>
+            <tr>
+              <td>3 - 4</td>
+              <td>08:45 - 10:15</td>
+              <td>Sosiologi / IPS</td>
+              <td>Bu Nurul, S.Sos</td>
+              <td>Ruang X-1</td>
+            </tr>
+            <tr>
+              <td>5 - 6</td>
+              <td>10:45 - 12:15</td>
+              <td>Geografi</td>
+              <td>Pak Eko, M.Pd</td>
+              <td>Ruang X-1</td>
+            </tr>
+            <tr>
+              <td>7 - 8</td>
+              <td>12:45 - 14:15</td>
+              <td>Bimbingan Konseling (BK)</td>
+              <td>Bu Linda, S.Psi</td>
+              <td>Ruang X-1</td>
+            </tr>
+
+            <!-- Jumat -->
+            <tr>
+              <td rowspan="3"><b>Jumat</b></td>
+              <td>1</td>
+              <td>07:00 - 07:45</td>
+              <td>Senam Pagi Bersama & Literasi</td>
+              <td>Tim Kesiswaan & OSIS</td>
+              <td>Lapangan Utama</td>
+            </tr>
+            <tr>
+              <td>2 - 3</td>
+              <td>07:45 - 09:15</td>
+              <td>Ekonomi</td>
+              <td>Pak Dedi, M.E</td>
+              <td>Ruang X-1</td>
+            </tr>
+            <tr>
+              <td>4 - 5</td>
+              <td>09:45 - 11:15</td>
+              <td>Prakarya & Kewirausahaan (PKWU)</td>
+              <td>Bu Anisa, S.Pd</td>
+              <td>Ruang X-1</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- Jadwal Piket Harian -->
+      <article>
+        <h3>2. Jadwal Piket Kebersihan Harian</h3>
+        <p><i>Catatan: Petugas piket wajib hadir pukul 06:45 WIB dan membersihkan kelas sebelum pulang sekolah.</i></p>
+
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th>Hari</th>
+              <th>Daftar Nama Petugas Piket</th>
+              <th>Uraian Tugas Pokok</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Senin</b></td>
+              <td>Alby Fabian, Citra Kirana, Fajar Ramadhan, Dinda Ayu, Rian Hidayat</td>
+              <td>Menyapu lantai, membersihkan papan tulis, membuang sampah.</td>
+            </tr>
+            <tr>
+              <td><b>Selasa</b></td>
+              <td>Mufid Al-Haq, Gita Savitri, Hafidz Nugraha, Intan Permata, Bagas Pratama</td>
+              <td>Mengepel lantai, merapikan meja guru, merapikan tirai jendela.</td>
+            </tr>
+            <tr>
+              <td><b>Rabu</b></td>
+              <td>Mikael Kevin, Nabila Syakieb, Oki Setiawan, Putri Anggraini, Rangga Wijaya</td>
+              <td>Menyapu lantai, membersihkan kaca jendela, mencuci tempat cuci tangan.</td>
+            </tr>
+            <tr>
+              <td><b>Kamis</b></td>
+              <td>Nafidz Maulana, Sarah Zahra, Taufik Ismail, Vina Pandu, Yoga Pratama</td>
+              <td>Menata ulang letak kursi meja, mengelap debu papan informasi.</td>
+            </tr>
+            <tr>
+              <td><b>Jumat</b></td>
+              <td>Zaidan Ali, Bella Safira, Dimas Anggara, Eka Putri, Farhan Maulana</td>
+              <td>Operasi semut sebelum sholat Jumat, memastikan AC dan lampu mati.</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <hr>
+    </section>
+
+    <!-- ==========================================================================
+         FITUR WAJIB 2: INFO TUGAS & PR
+         ========================================================================== -->
+    <section id="tugas">
+      <h2>Info Tugas & PR Kelas X-1</h2>
+      <p>Daftar tugas rumah, laporan praktikum, dan proyek kelompok lengkap dengan batas pengumpulan (deadline).</p>
+
+      <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Mata Pelajaran</th>
+            <th>Judul Tugas / PR</th>
+            <th>Deskripsi & Petunjuk</th>
+            <th>Tenggat Waktu (Deadline)</th>
+            <th>Jenis Tugas</th>
+            <th>Status Pengerjaan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><b>Informatika</b></td>
+            <td>Final Project Pembuatan Website Kelas (HTML)</td>
+            <td>Membuat halaman utama website kelas per kelompok berisi jadwal, kas, dan menfess.</td>
+            <td>25 November 2026</td>
+            <td>Kelompok (4 Siswa)</td>
+            <td>Belum Selesai</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><b>Matematika</b></td>
+            <td>Latihan Soal SPLTV Halaman 84 No. 1-10</td>
+            <td>Dikerjakan di buku berpetak dengan metode eliminasi dan substitusi.</td>
+            <td>20 November 2026</td>
+            <td>Individu</td>
+            <td>Belum Selesai</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><b>Bahasa Indonesia</b></td>
+            <td>Analisis Kaidah & Struktur Teks Anekdot</td>
+            <td>Mencari 1 contoh teks anekdot bertema kritik sosial dan menandai strukturnya.</td>
+            <td>22 November 2026</td>
+            <td>Individu</td>
+            <td>Sudah Selesai</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><b>Fisika</b></td>
+            <td>Laporan Praktikum GLB & GLBB</td>
+            <td>Ketik rapi format PDF dan lampirkan potongan pita ticker timer.</td>
+            <td>24 November 2026</td>
+            <td>Kelompok</td>
+            <td>Belum Selesai</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Formulir Tambah Tugas (Hak Akses Pengurus) -->
+      <article>
+        <h3>Formulir Tambah Tugas Baru (Khusus Pengurus Kelas)</h3>
+        <form>
+          <fieldset>
+            <legend>Input Data Tugas</legend>
+            <p>
+              <label for="inputMapel">Mata Pelajaran:</label><br>
+              <input type="text" id="inputMapel" name="mapel" placeholder="Contoh: Matematika" required>
+            </p>
+            <p>
+              <label for="inputJudulTugas">Judul Tugas / PR:</label><br>
+              <input type="text" id="inputJudulTugas" name="judul" placeholder="Contoh: Bab 4 Halaman 70" required>
+            </p>
+            <p>
+              <label for="inputDescTugas">Deskripsi Tugas:</label><br>
+              <textarea id="inputDescTugas" name="desc" rows="3" cols="50" placeholder="Petunjuk pengerjaan tugas..."></textarea>
+            </p>
+            <p>
+              <label for="inputDeadline">Tenggat Waktu (Deadline):</label><br>
+              <input type="date" id="inputDeadline" name="deadline" required>
+            </p>
+            <p>
+              <label for="selectTipeTugas">Jenis Pengerjaan:</label><br>
+              <select id="selectTipeTugas" name="tipe">
+                <option value="Individu">Individu</option>
+                <option value="Kelompok">Kelompok</option>
+              </select>
+            </p>
+            <p>
+              <button type="submit">Tambah Tugas</button>
+              <button type="reset">Reset Form</button>
+            </p>
+          </fieldset>
+        </form>
+      </article>
+      <hr>
+    </section>
+
+    <!-- ==========================================================================
+         FITUR WAJIB 3: LAPORAN UANG KAS
+         ========================================================================== -->
+    <section id="kas">
+      <h2>Laporan Keuangan & Uang Kas Kelas</h2>
+      <p>Transparansi pemasukan, pengeluaran, dan status pembayaran iuran kas mingguan kelas X-1.</p>
+
+      <!-- Ringkasan Saldo -->
+      <article>
+        <h3>Ringkasan Saldo Keuangan</h3>
+        <ul>
+          <li><b>Total Pemasukan:</b> Rp 2.100.000</li>
+          <li><b>Total Pengeluaran:</b> Rp 650.000</li>
+          <li><b>Sisa Saldo Kas Terkini:</b> <b>Rp 1.450.000</b></li>
+        </ul>
+      </article>
+
+      <!-- Tabel Riwayat Transaksi -->
+      <article>
+        <h3>1. Riwayat Transaksi Kas Masuk & Keluar</h3>
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Tanggal</th>
+              <th>Keterangan Transaksi</th>
+              <th>Tipe</th>
+              <th>Jumlah (Rupiah)</th>
+              <th>Penanggung Jawab</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>02 November 2026</td>
+              <td>Iuran Kas Minggu ke-1 (30 Siswa)</td>
+              <td>Pemasukan</td>
+              <td>Rp 300.000</td>
+              <td>Citra (Bendahara I)</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>05 November 2026</td>
+              <td>Beli Alat Kebersihan (Sapu, Pel, Kemoceng)</td>
+              <td>Pengeluaran</td>
+              <td>Rp 85.000</td>
+              <td>Bella (Kebersihan)</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>09 November 2026</td>
+              <td>Iuran Kas Minggu ke-2 (32 Siswa)</td>
+              <td>Pemasukan</td>
+              <td>Rp 320.000</td>
+              <td>Sarah (Bendahara II)</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>12 November 2026</td>
+              <td>Konsumsi & Air Mineral Classmeeting Futsal</td>
+              <td>Pengeluaran</td>
+              <td>Rp 150.000</td>
+              <td>Yoga (Olahraga)</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>16 November 2026</td>
+              <td>Iuran Kas Minggu ke-3 (31 Siswa)</td>
+              <td>Pemasukan</td>
+              <td>Rp 310.000</td>
+              <td>Citra (Bendahara I)</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>17 November 2026</td>
+              <td>Beli Spidol Whiteboard & Penghapus Papan Tulis</td>
+              <td>Pengeluaran</td>
+              <td>Rp 45.000</td>
+              <td>Alby (Sekretaris)</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- Tabel Status Pembayaran Iuran Siswa -->
+      <article>
+        <h3>2. Status Pembayaran Iuran Siswa Tiap Minggu</h3>
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th>No Absen</th>
+              <th>Nama Siswa</th>
+              <th>Minggu Terbayar</th>
+              <th>Status Iuran</th>
+              <th>Kontak WhatsApp Siswa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Alby Fabian</td>
+              <td>4 / 4 Minggu</td>
+              <td>Lunas</td>
+              <td><a href="https://wa.me/6281234567890" target="_blank">Chat Siswa</a></td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>Bella Safira</td>
+              <td>3 / 4 Minggu</td>
+              <td>Nunggak 1 Minggu</td>
+              <td><a href="https://wa.me/6281234567891?text=Halo%20Bella,%20jangan%20lupa%20bayar%20uang%20kas%20kelas%20ya" target="_blank">Kirim Pengingat Kas</a></td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>Citra Kirana</td>
+              <td>4 / 4 Minggu</td>
+              <td>Lunas</td>
+              <td><a href="https://wa.me/6281234567892" target="_blank">Chat Siswa</a></td>
+            </tr>
+            <tr>
+              <td>04</td>
+              <td>Dimas Anggara</td>
+              <td>4 / 4 Minggu</td>
+              <td>Lunas</td>
+              <td><a href="https://wa.me/6281234567893" target="_blank">Chat Siswa</a></td>
+            </tr>
+            <tr>
+              <td>05</td>
+              <td>Mikael Kevin</td>
+              <td>4 / 4 Minggu</td>
+              <td>Lunas</td>
+              <td><a href="https://wa.me/6281234567894" target="_blank">Chat Siswa</a></td>
+            </tr>
+            <tr>
+              <td>06</td>
+              <td>Mufid Al-Haq</td>
+              <td>4 / 4 Minggu</td>
+              <td>Lunas</td>
+              <td><a href="https://wa.me/6281234567895" target="_blank">Chat Siswa</a></td>
+            </tr>
+            <tr>
+              <td>07</td>
+              <td>Nafidz Maulana</td>
+              <td>4 / 4 Minggu</td>
+              <td>Lunas</td>
+              <td><a href="https://wa.me/6281234567896" target="_blank">Chat Siswa</a></td>
+            </tr>
+            <tr>
+              <td>08</td>
+              <td>Rian Hidayat</td>
+              <td>2 / 4 Minggu</td>
+              <td>Nunggak 2 Minggu</td>
+              <td><a href="https://wa.me/6281234567897?text=Halo%20Rian,%20jangan%20lupa%20bayar%20uang%20kas%20kelas%20ya" target="_blank">Kirim Pengingat Kas</a></td>
+            </tr>
+            <tr>
+              <td>09</td>
+              <td>Sarah Zahra</td>
+              <td>4 / 4 Minggu</td>
+              <td>Lunas</td>
+              <td><a href="https://wa.me/6281234567898" target="_blank">Chat Siswa</a></td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Yoga Pratama</td>
+              <td>3 / 4 Minggu</td>
+              <td>Nunggak 1 Minggu</td>
+              <td><a href="https://wa.me/6281234567899?text=Halo%20Yoga,%20jangan%20lupa%20bayar%20uang%20kas%20kelas%20ya" target="_blank">Kirim Pengingat Kas</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- Formulir Catat Transaksi Kas (Hak Akses Bendahara / Pengurus) -->
+      <article>
+        <h3>Formulir Catat Transaksi Kas Baru (Khusus Bendahara)</h3>
+        <form>
+          <fieldset>
+            <legend>Pencatatan Transaksi</legend>
+            <p>
+              <label for="kasKeterangan">Keterangan Transaksi:</label><br>
+              <input type="text" id="kasKeterangan" name="keterangan" placeholder="Contoh: Beli spidol whiteboard" required>
+            </p>
+            <p>
+              <label for="kasTipe">Jenis Transaksi:</label><br>
+              <select id="kasTipe" name="tipeKas">
+                <option value="Pemasukan">Pemasukan (Iuran / Donasi)</option>
+                <option value="Pengeluaran">Pengeluaran (Belanja Kebutuhan)</option>
+              </select>
+            </p>
+            <p>
+              <label for="kasNominal">Nominal (Rupiah):</label><br>
+              <input type="number" id="kasNominal" name="nominal" placeholder="50000" min="1000" required>
+            </p>
+            <p>
+              <label for="kasTgl">Tanggal:</label><br>
+              <input type="date" id="kasTgl" name="tanggal" required>
+            </p>
+            <p>
+              <button type="submit">Catat Transaksi</button>
+            </p>
+          </fieldset>
+        </form>
+      </article>
+      <hr>
+    </section>
+
+    <!-- ==========================================================================
+         FITUR WAJIB 4: PAPAN PENGUMUMAN
+         ========================================================================== -->
+    <section id="pengumuman">
+      <h2>Papan Pengumuman Kelas</h2>
+      <p>Informasi resmi, kabar mendadak jam kosong, seragam sekolah, dan agenda bersama.</p>
+
+      <article>
+        <h3>[PENTING] Seragam Batik & Gladi Bersih Upacara Hari Guru</h3>
+        <p><b>Tanggal:</b> 18 November 2026 | <b>Oleh:</b> Mikael Kevin (Ketua Kelas)</p>
+        <p>
+          Diberitahukan kepada seluruh siswa Kelas X-1, untuk hari Kamis besok diwajibkan mengenakan
+          seragam <b>Batik Daerah</b> lengkap dengan sepatu hitam polos. Perwakilan kelas yang bertugas
+          sebagai paduan suara dan petugas upacara wajib berkumpul di aula sekolah pukul 14:00 WIB untuk gladi bersih.
+        </p>
+      </article>
+
+      <article>
+        <h3>[AKADEMIK] Jam Kosong Mapel Kimia Hari Rabu (Tugas Mandiri)</h3>
+        <p><b>Tanggal:</b> 17 November 2026 | <b>Oleh:</b> Alby Fabian (Sekretaris I)</p>
+        <p>
+          Bu Diana berhalangan hadir pada hari Rabu karena menghadiri seminar MGMP Kimia tingkat kabupaten.
+          Siswa diinstruksikan untuk merangkum materi Bab 4 pada buku LKS halaman 50-54 dan mengumpulkan catatan
+          di meja guru sebelum jam pulang.
+        </p>
+      </article>
+
+      <article>
+        <h3>[AGENDA KELAS] Desain Jaket Angkatan & Foto Buku Kenangan</h3>
+        <p><b>Tanggal:</b> 15 November 2026 | <b>Oleh:</b> Mufid Al-Haq (Humas Kelas)</p>
+        <p>
+          Formulir voting pemilihan warna dan ukuran jaket angkatan kelas X-1 telah dibuka.
+          Dimohon seluruh siswa mengisi form ukuran (S, M, L, XL) sebelum hari Jumat melalui link grup kelas.
+        </p>
+      </article>
+
+      <!-- Form Buat Pengumuman Baru -->
+      <article>
+        <h3>Formulir Posting Pengumuman Baru (Khusus Pengurus)</h3>
+        <form>
+          <fieldset>
+            <legend>Buat Pengumuman</legend>
+            <p>
+              <label for="judulAnn">Judul Pengumuman:</label><br>
+              <input type="text" id="judulAnn" name="judulAnn" placeholder="Judul info..." required>
+            </p>
+            <p>
+              <label for="kategoriAnn">Kategori:</label><br>
+              <select id="kategoriAnn" name="kategoriAnn">
+                <option value="Penting">Penting / Mendesak</option>
+                <option value="Akademik">Akademik / Pembelajaran</option>
+                <option value="Agenda">Agenda Santai / Angkatan</option>
+              </select>
+            </p>
+            <p>
+              <label for="isiAnn">Isi Lengkap Pengumuman:</label><br>
+              <textarea id="isiAnn" name="isiAnn" rows="4" cols="50" placeholder="Ketik rincian pengumuman..." required></textarea>
+            </p>
+            <p>
+              <label for="penulisAnn">Nama Pengirim / Jabatan:</label><br>
+              <input type="text" id="penulisAnn" name="penulisAnn" placeholder="Contoh: Ketua Kelas / Wali Kelas" required>
+            </p>
+            <p>
+              <button type="submit">Publikasikan Pengumuman</button>
+            </p>
+          </fieldset>
+        </form>
+      </article>
+      <hr>
+    </section>
+
+    <!-- ==========================================================================
+         FITUR PENDUKUNG 1: STRUKTUR ORGANISASI KELAS
+         ========================================================================== -->
+    <section id="struktur">
+      <h2>Struktur Kepengurusan Organisasi Kelas X-1</h2>
+      <p>Susunan pengurus kelas beserta pintasan komunikasi langsung melalui WhatsApp.</p>
+
+      <ul>
+        <li>
+          <b>Wali Kelas:</b> Dra. Hj. Nurjanah, M.Pd
+          <br>Kontak: <a href="https://wa.me/6281234567800?text=Halo%20Bu%20Nurjanah,%20saya%20siswa%20kelas%20X-1" target="_blank">Chat WhatsApp Wali Kelas</a>
+        </li>
+        <li>
+          <b>Ketua Kelas:</b> Mikael Kevin
+          <br>Kontak: <a href="https://wa.me/6281234567894?text=Halo%20Ketua%20Kelas%20Mikael,%20mau%20tanya%20info%20kelas" target="_blank">Chat WhatsApp Ketua Kelas</a>
+        </li>
+        <li>
+          <b>Wakil Ketua Kelas:</b> Mufid Al-Haq
+          <br>Kontak: <a href="https://wa.me/6281234567895" target="_blank">Chat WhatsApp Wakil Ketua</a>
+        </li>
+        <li>
+          <b>Sekretaris:</b>
+          <ul>
+            <li>Sekretaris I: Alby Fabian</li>
+            <li>Sekretaris II: Dinda Ayu</li>
+          </ul>
+        </li>
+        <li>
+          <b>Bendahara:</b>
+          <ul>
+            <li>Bendahara I: Citra Kirana</li>
+            <li>Bendahara II: Sarah Zahra</li>
+          </ul>
+        </li>
+        <li>
+          <b>Seksi-Seksi Bidang:</b>
+          <ul>
+            <li>Seksi Kebersihan: Bella Safira & Fajar Ramadhan</li>
+            <li>Seksi Olahraga: Yoga Pratama & Bagas Pratama</li>
+            <li>Seksi Dokumentasi & Publikasi: Nafidz Maulana</li>
+            <li>Seksi Kerohanian: Zaidan Ali & Intan Permata</li>
+          </ul>
+        </li>
+      </ul>
+      <hr>
+    </section>
+
+    <!-- ==========================================================================
+         FITUR PENDUKUNG 2: PROFIL SISWA & PENGINGAT ULANG TAHUN
+         ========================================================================== -->
+    <section id="profil">
+      <h2>Direktori Profil Siswa & Pengingat Ulang Tahun</h2>
+      <p>Daftar teman sekelas, kutipan favorit, sosial media, dan jadwal ulang tahun siswa.</p>
+
+      <!-- Pengingat Ulang Tahun -->
+      <article>
+        <h3>Pengingat Ulang Tahun Bulan Ini (November)</h3>
+        <p>Jangan lupa memberi ucapan selamat dan doa untuk teman sekelas kita:</p>
+        <ul>
+          <li><b>Sarah Zahra</b> - 18 November (Hari Ini!)</li>
+          <li><b>Mikael Kevin</b> - 19 November (Besok)</li>
+          <li><b>Bella Safira</b> - 22 November</li>
+          <li><b>Nafidz Maulana</b> - 28 November</li>
+        </ul>
+      </article>
+
+      <!-- Daftar Profil Siswa -->
+      <article>
+        <h3>Daftar Profil Siswa Kelas X-1</h3>
+        <ol>
+          <li>
+            <b>Alby Fabian</b> (Absen 01)
+            <br>Jabatan: Sekretaris I & Tim Pengembang
+            <br>Motto: <i>"Code your dream into reality."</i>
+            <br>Sosial Media: <a href="https://instagram.com" target="_blank">Instagram: @alby_fabian</a> | <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
+          </li>
+          <li>
+            <b>Bella Safira</b> (Absen 02)
+            <br>Jabatan: Seksi Kebersihan
+            <br>Motto: <i>"Bersih pangkal nyaman belajar."</i>
+            <br>Sosial Media: <a href="https://instagram.com" target="_blank">Instagram: @bellasfr</a> | <a href="https://wa.me/6281234567891" target="_blank">WhatsApp</a>
+          </li>
+          <li>
+            <b>Citra Kirana</b> (Absen 03)
+            <br>Jabatan: Bendahara I
+            <br>Motto: <i>"Kas lancar, kegiatan kelas aman sentosa."</i>
+            <br>Sosial Media: <a href="https://instagram.com" target="_blank">Instagram: @citrakrn</a> | <a href="https://wa.me/6281234567892" target="_blank">WhatsApp</a>
+          </li>
+          <li>
+            <b>Dimas Anggara</b> (Absen 04)
+            <br>Jabatan: Anggota Kelas
+            <br>Motto: <i>"Belajar giat untuk masa depan yang hebat."</i>
+            <br>Sosial Media: <a href="https://instagram.com" target="_blank">Instagram: @dimas_ang</a> | <a href="https://wa.me/6281234567893" target="_blank">WhatsApp</a>
+          </li>
+          <li>
+            <b>Mikael Kevin</b> (Absen 05)
+            <br>Jabatan: Ketua Kelas & Tim Pengembang
+            <br>Motto: <i>"Memimpin dengan aksi, bukan sekadar kata."</i>
+            <br>Sosial Media: <a href="https://instagram.com" target="_blank">Instagram: @mikael_kevin</a> | <a href="https://wa.me/6281234567894" target="_blank">WhatsApp</a>
+          </li>
+          <li>
+            <b>Mufid Al-Haq</b> (Absen 06)
+            <br>Jabatan: Wakil Ketua Kelas & Tim Pengembang
+            <br>Motto: <i>"Solidaritas tanpa batas untuk kelas tercinta."</i>
+            <br>Sosial Media: <a href="https://instagram.com" target="_blank">Instagram: @mufid_alhaq</a> | <a href="https://wa.me/6281234567895" target="_blank">WhatsApp</a>
+          </li>
+          <li>
+            <b>Nafidz Maulana</b> (Absen 07)
+            <br>Jabatan: Seksi Dokumentasi & Tim Pengembang
+            <br>Motto: <i>"Abadikan setiap detik cerita masa putih abu-abu."</i>
+            <br>Sosial Media: <a href="https://instagram.com" target="_blank">Instagram: @nafidz_mln</a> | <a href="https://wa.me/6281234567896" target="_blank">WhatsApp</a>
+          </li>
+          <li>
+            <b>Sarah Zahra</b> (Absen 08)
+            <br>Jabatan: Bendahara II
+            <br>Motto: <i>"Transparan dan amanah dalam setiap rupiah."</i>
+            <br>Sosial Media: <a href="https://instagram.com" target="_blank">Instagram: @sarahzhra</a> | <a href="https://wa.me/6281234567898" target="_blank">WhatsApp</a>
+          </li>
+          <li>
+            <b>Yoga Pratama</b> (Absen 09)
+            <br>Jabatan: Seksi Olahraga
+            <br>Motto: <i>"Men sana in corpore sano, di dalam tubuh yang sehat terdapat jiwa yang kuat."</i>
+            <br>Sosial Media: <a href="https://instagram.com" target="_blank">Instagram: @yogapratama</a> | <a href="https://wa.me/6281234567899" target="_blank">WhatsApp</a>
+          </li>
+        </ol>
+      </article>
+      <hr>
+    </section>
+
+    <!-- ==========================================================================
+         FITUR PENDUKUNG 3: BANK MATERI DRIVE
+         ========================================================================== -->
+    <section id="materi">
+      <h2>Bank Materi & Catatan Ujian</h2>
+      <p>Kumpulan tautan folder Google Drive berisi slide presentasi guru, modul PDF, dan catatan ujian.</p>
+
+      <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>Mata Pelajaran</th>
+            <th>Judul Materi & Catatan</th>
+            <th>Pengajar</th>
+            <th>Format File</th>
+            <th>Tautan Google Drive</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Informatika</td>
+            <td>Slide Presentasi: Pengantar Dasar HTML5 Semantic & Struktur Web</td>
+            <td>Pak Hendra, S.Kom</td>
+            <td>PowerPoint (.PPTX)</td>
+            <td><a href="https://drive.google.com" target="_blank">Buka File di Google Drive</a></td>
+          </tr>
+          <tr>
+            <td>Matematika</td>
+            <td>Modul Ringkasan Rumus SPLTV & SPLDV Lengkap Latihan Soal</td>
+            <td>Pak Joko, M.Pd</td>
+            <td>Dokumen PDF (.PDF)</td>
+            <td><a href="https://drive.google.com" target="_blank">Buka File di Google Drive</a></td>
+          </tr>
+          <tr>
+            <td>Fisika</td>
+            <td>Kumpulan Soal Latihan Penilaian Akhir Semester (PAS) & Kunci Jawaban</td>
+            <td>Pak Budi Santoso, M.Si</td>
+            <td>Dokumen PDF (.PDF)</td>
+            <td><a href="https://drive.google.com" target="_blank">Buka File di Google Drive</a></td>
+          </tr>
+          <tr>
+            <td>Bahasa Inggris</td>
+            <td>Catatan Grammar: Perbedaan Simple Past Tense vs Present Perfect Tense</td>
+            <td>Miss Clara, M.Hum</td>
+            <td>Catatan Teks / PDF</td>
+            <td><a href="https://drive.google.com" target="_blank">Buka File di Google Drive</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+    </section>
+
+    <!-- ==========================================================================
+         FITUR PENDUKUNG 4: GALERI KELAS
+         ========================================================================== -->
+    <section id="galeri">
+      <h2>Galeri Dokumentasi Kegiatan Kelas X-1</h2>
+      <p>Koleksi foto kegiatan belajar bersama, perlombaan sekolah, dan momen kebersamaan.</p>
+
+      <article>
+        <h3>1. Perlombaan Futsal Classmeeting Semester Ganjil</h3>
+        <p><b>Tanggal:</b> 10 November 2026</p>
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="Foto Tim Futsal Kelas X-1" width="450">
+        <p><i>Keterangan: Momen saat tim futsal kelas X-1 berhasil meraih juara di ajang classmeeting sekolah.</i></p>
+      </article>
+
+      <article>
+        <h3>2. Praktikum Reaksi Asam Basa di Laboratorium Kimia</h3>
+        <p><b>Tanggal:</b> 04 November 2026</p>
+        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80" alt="Foto Praktikum Kimia" width="450">
+        <p><i>Keterangan: Siswa menguji larutan asam basa dengan indikator alami dan kertas lakmus.</i></p>
+      </article>
+
+      <article>
+        <h3>3. Kerja Bakti & Dekorasi Ruang Kelas</h3>
+        <p><b>Tanggal:</b> 28 Oktober 2026</p>
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Foto Kerja Bakti Kelas" width="450">
+        <p><i>Keterangan: Bersama-sama membersihkan dan menempelkan mading karya siswa di dinding kelas.</i></p>
+      </article>
+
+      <article>
+        <h3>4. Kunjungan Edukasi & Study Tour Museum Sejarah</h3>
+        <p><b>Tanggal:</b> 14 Oktober 2026</p>
+        <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=600&q=80" alt="Foto Kunjungan Museum" width="450">
+        <p><i>Keterangan: Kunjungan lapangan untuk mempelajari artefak peradaban nusantara.</i></p>
+      </article>
+      <hr>
+    </section>
+
+    <!-- ==========================================================================
+         FITUR PENDUKUNG 5: MENFESS & KOTAK ASPIRASI
+         ========================================================================== -->
+    <section id="menfess">
+      <h2>Menfess & Kotak Aspirasi Kelas</h2>
+      <p>Sampaikan pesan anonim, apresiasi teman sekelas, saran perbaikan fasilitas, atau request lagu jam istirahat.</p>
+
+      <!-- Formulir Kirim Pesan -->
+      <article>
+        <h3>Kirim Pesan atau Aspirasi Baru</h3>
+        <form>
+          <fieldset>
+            <legend>Formulir Pesan Siswa</legend>
+            <p>
+              <label for="tipeMenfess">Kategori Pesan:</label><br>
+              <select id="tipeMenfess" name="tipePesan">
+                <option value="aspirasi">Aspirasi / Saran Fasilitas Kelas</option>
+                <option value="menfess">Menfess / Pesan Apresiasi Rahasia</option>
+                <option value="music">Request Lagu Jam Istirahat</option>
+              </select>
+            </p>
+            <p>
+              <label for="pengirimMenfess">Nama Pengirim (Boleh Kosong / Anonim):</label><br>
+              <input type="text" id="pengirimMenfess" name="pengirim" placeholder="Contoh: Anonim / Siswa Bangku Belakang">
+            </p>
+            <p>
+              <label for="tujuanMenfess">Ditujukan Kepada (Opsional):</label><br>
+              <input type="text" id="tujuanMenfess" name="tujuan" placeholder="Contoh: Pengurus Kelas / Dinda">
+            </p>
+            <p>
+              <label for="isiMenfess">Isi Pesan:</label><br>
+              <textarea id="isiMenfess" name="pesan" rows="4" cols="50" placeholder="Tuliskan pesanmu dengan sopan..." required></textarea>
+            </p>
+            <p>
+              <button type="submit">Kirim Pesan</button>
+              <button type="reset">Batal</button>
+            </p>
+          </fieldset>
+        </form>
+      </article>
+
+      <!-- Daftar Pesan yang Masuk -->
+      <article>
+        <h3>Daftar Pesan & Aspirasi yang Sudah Terpublikasi</h3>
+
+        <article>
+          <h4>[Aspirasi Fasilitas] Dari: Siswa Kelas</h4>
+          <p><b>Ditujukan Untuk:</b> Pengurus Kelas & Seksi Sarana</p>
+          <blockquote>
+            "Tolong AC di baris belakang sering meneteskan air ke meja siswa nomor 14, mohon dilaporkan ke staf sarpras sekolah ya min."
+          </blockquote>
+          <p><small>Diposting pada: 18 November 2026</small></p>
+        </article>
+
+        <article>
+          <h4>[Menfess Apresiasi] Dari: Secret Admirer</h4>
+          <p><b>Ditujukan Untuk:</b> Dinda (Absen 02)</p>
+          <blockquote>
+            "Semangat ya yang tadi presentasi Biologi, suaramu jelas banget dan penjelasannya mudah dipahami!"
+          </blockquote>
+          <p><small>Diposting pada: 17 November 2026</small></p>
+        </article>
+
+        <article>
+          <h4>[Request Lagu] Dari: Anak Bangku Tengah</h4>
+          <p><b>Ditujukan Untuk:</b> Operator Musik Jam Istirahat</p>
+          <blockquote>
+            "Request putar lagu 'Rumah ke Rumah' dari Hindia pas istirahat kedua nanti ya!"
+          </blockquote>
+          <p><small>Diposting pada: 16 November 2026</small></p>
+        </article>
+      </article>
+      <hr>
+    </section>
+
+    <!-- ==========================================================================
+         SISTEM DASAR: PENJELASAN HAK AKSES & INFORMASI ROLE
+         ========================================================================== -->
+    <section id="role">
+      <h2>Sistem Hak Akses Akun (Role Management)</h2>
+      <p>Sistem ini dirancang untuk membedakan hak akses pengguna:</p>
+      <ul>
+        <li>
+          <b>Role Siswa Biasa:</b>
+          Dapat melihat jadwal pelajaran, jadwal piket, info tugas, saldo kas, materi pelajaran, galeri, serta mengirim pesan di kotak menfess.
+        </li>
+        <li>
+          <b>Role Pengurus Kelas (Admin):</b>
+          Memiliki akses tambahan untuk menambah tugas baru, mencatat transaksi uang kas, memposting pengumuman resmi, dan memoderasi pesan menfess sebelum tampil.
+        </li>
+      </ul>
+      <hr>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer>
+    <p><b>ClassHub X-1 - Website Portal Kelas X</b></p>
+    <p>
+      Proyek Kolaborasi Final Project Belajar HTML oleh:
+      <b>Alby Fabian, Mufid Al-Haq, Mikael Kevin, dan Nafidz Maulana</b>.
+    </p>
+    <p>&copy; 2026 Kelas X-1. Seluruh hak cipta dilindungi.</p>
+    <p><a href="#home">Kembali ke Atas Halaman</a></p>
+  </footer>
+
+</body>
+</html>
