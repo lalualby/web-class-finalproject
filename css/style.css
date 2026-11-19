@@ -1,0 +1,157 @@
+/* ========================================================
+   WEB-CLASS FINAL PROJECT - GLOBAL STYLESHEET
+   Struktur styling dibuat modular dan rapi agar mudah
+   di-revisi atau disesuaikan saat desain UI/UX baru tiba.
+======================================================== */
+
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary-color: #475569;
+  --guru-color: #0d9488;
+  --guru-bg: #f0fdfa;
+  --siswa-color: #4f46e5;
+  --siswa-bg: #eef2ff;
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  --card-radius: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+/* ----------------------------------------------------
+   PORTAL / GATEWAY / LOGIN PAGE (index.html)
+---------------------------------------------------- */
+.portal-wrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.08) 0%, rgba(248, 250, 252, 1) 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.portal-container {
+  width: 100%;
+  max-width: 520px;
+}
+
+.portal-card {
+  background: #ffffff;
+  border-radius: var(--card-radius);
+  border: 1px solid #e2e8f0;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.role-selector-btn {
+  border-radius: 12px;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.role-selector-btn:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+.role-selector-btn.active-role-guru {
+  border-color: var(--guru-color);
+  background: var(--guru-bg);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.15);
+}
+
+.role-selector-btn.active-role-siswa {
+  border-color: var(--siswa-color);
+  background: var(--siswa-bg);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+
+.role-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.demo-account-box {
+  background: #f1f5f9;
+  border-left: 4px solid #3b82f6;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* ----------------------------------------------------
+   DASHBOARD GENERAL STYLES
+---------------------------------------------------- */
+.navbar-custom {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.dashboard-header-banner {
+  border-radius: var(--card-radius);
+  padding: 1.75rem 2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.banner-guru {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+}
+
+.banner-siswa {
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: var(--card-radius);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow);
+}
+
+.badge-role-guru {
+  background-color: #ccfbf1;
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.badge-role-siswa {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  font-weight: 600;
+}
+
+.schedule-day-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.schedule-day-badge.today {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
