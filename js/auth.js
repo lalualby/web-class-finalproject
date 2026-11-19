@@ -110,6 +110,7 @@ const Auth = {
 
   /**
    * Memproses login dengan username & password
+   * Otomatis mendeteksi role jika akun valid
    */
   login(username, password, role) {
     const trimmedUser = (username || '').trim().toLowerCase();
@@ -119,10 +120,21 @@ const Auth = {
       return { success: false, message: 'Harap isi username/NIS dan password!' };
     }
 
-    const accountList = DEMO_USERS[role] || [];
-    const matched = accountList.find(
-      (acc) => acc.username.toLowerCase() === trimmedUser && acc.password === trimmedPass
-    );
+    let matched = null;
+    // Coba cari di role yang dipilih terlebih dahulu
+    if (role && DEMO_USERS[role]) {
+      matched = DEMO_USERS[role].find(
+        (acc) => acc.username.toLowerCase() === trimmedUser && acc.password === trimmedPass
+      );
+    }
+
+    // Jika tidak ditemukan di role terpilih, coba cari di seluruh akun (auto-detection)
+    if (!matched) {
+      const allAccounts = [...DEMO_USERS.guru, ...DEMO_USERS.siswa];
+      matched = allAccounts.find(
+        (acc) => acc.username.toLowerCase() === trimmedUser && acc.password === trimmedPass
+      );
+    }
 
     if (matched) {
       this.setSession(matched);
@@ -134,7 +146,7 @@ const Auth = {
     } else {
       return {
         success: false,
-        message: 'Username/ID atau password salah! (Cek info akun demo di bawah form)'
+        message: 'Username atau password salah! Silakan periksa kembali akun demo Anda.'
       };
     }
   },
@@ -143,8 +155,14 @@ const Auth = {
    * Quick Login 1-klik untuk kemudahan demo
    */
   quickLogin(username, role) {
-    const accountList = DEMO_USERS[role] || [];
-    const matched = accountList.find((acc) => acc.username.toLowerCase() === username.toLowerCase());
+    let matched = null;
+    if (role && DEMO_USERS[role]) {
+      matched = DEMO_USERS[role].find((acc) => acc.username.toLowerCase() === username.toLowerCase());
+    }
+    if (!matched) {
+      const allAccounts = [...DEMO_USERS.guru, ...DEMO_USERS.siswa];
+      matched = allAccounts.find((acc) => acc.username.toLowerCase() === username.toLowerCase());
+    }
     if (matched) {
       this.setSession(matched);
       window.location.href = matched.role === 'guru' ? 'dashboard-admin.html' : 'dashboard-siswa.html';
@@ -159,7 +177,7 @@ const Auth = {
 
     // 1. Belum login sama sekali
     if (!session) {
-      alert('Akses Dibatasi: Silakan masuk terlebih dahulu melalui portal login!');
+      alert('Akses Dibatasi: Silakan login terlebih dahulu melalui tombol Login di beranda!');
       window.location.href = 'index.html';
       return null;
     }
