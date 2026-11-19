@@ -1,3 +1,73 @@
-/* File CSS dikosongkan sesuai permintaan (Pure HTML mode).
-   Jika nanti ingin menambahkan styling sendiri, silakan tulis CSS di file ini.
-   File cadangan style sebelumnya disimpan di style.backup.css */
+/* ==========================================================================
+   PORTAL KELAS X RPL B - STYLE SYSTEM (DESIGN.MD SPECIFICATION)
+   Authors: Alby, Mufid, Mikael, Nafidz (Kelas X)
+   ========================================================================== */
+
+:root {
+  --royal-dark: #1e3a8a;
+  --royal-navy: #1d4ed8;
+  --royal-deep: #1e40af;
+  --royal-surface: #2563eb;
+  --royal-light: #3b82f6;
+
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #0284c7;
+  --tertiary: #38bdf8;
+
+  --surface: #f8f9ff;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+}
+
+/* Base Enhancements */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--royal-navy);
+}
+
+.font-mono-code {
+  font-family: var(--font-code);
+}
+
+/* Glassmorphic Content Glow Card */
+.content-glow-card {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 
+              0 8px 16px -6px rgba(0, 0, 0, 0.04), 
+              0 0 20px -3px rgba(59, 130, 246, 0.12);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content-glow-card:hover {
+  box-shadow: 0 16px 32px -6px rgba(0, 0, 0, 0.12), 
+              0 0 28px -2px rgba(59, 130, 246, 0.22);
+  transform: translateY(-2px);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
